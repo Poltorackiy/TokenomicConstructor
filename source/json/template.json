@@ -1,0 +1,30 @@
+{
+    "dataBlocks": {
+        "dataBlockName": {
+            "extraInputs": {
+                "inputs": {
+                    "inputId": {
+                        "inputValue": "value"
+                    }
+                },
+                "tables": {
+                    "tableId": {
+                        "rows": [
+                            {
+                                "rowId": "",
+                                "inputs": {
+                                    "inputId": {
+                                        "inputValue": "value"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "baseInputs": {
+
+            }
+        }
+    }
+}

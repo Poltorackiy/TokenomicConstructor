@@ -1,0 +1,107 @@
+/* 
+    *************************************
+              ABOVE 1696px 
+    *************************************
+*/
+
+@media (min-width: 106em) {
+  p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+
+  #zbcc > .form-block form section.data-block > .input-data .base-inputs {
+    padding-bottom: 9.8rem;
+  }
+
+  #zbcc > .form-block form section.data-block > header h3.block-title {
+    margin-bottom: 6.2rem;
+    padding-left: 12.8rem;
+  }
+}
+
+/* 
+    *************************************
+              BELOW 1408px 
+    *************************************
+*/
+
+@media (max-width: 88em) {
+  #zbcc > .form-block form section.data-block > header h3.block-title {
+    margin-bottom: 4.8rem;
+    width: 50%;
+    font-size: 2.4rem;
+  }
+
+  #zbcc > .form-block form section.data-block > header .block-description {
+    width: 100%;
+    padding: 2.4rem;
+  }
+}
+
+/* 
+    *************************************
+        BELOW 1200px Landscape tablet
+    *************************************
+*/
+
+@media (max-width: 75em) {
+  #zbcc > .form-block form section.data-block > header .block-description {
+    padding: 1.8rem;
+  }
+}
+
+/* 
+    *************************************
+        BELOW 1056px Landscape tablet
+    *************************************
+*/
+
+@media (max-width: 66em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  #zbcc > .form-block form section.data-block > header h3.block-title {
+    margin-bottom: 3.2rem;
+    padding-top: 8.6rem;
+    padding-left: 8.2rem;
+  }
+}
+
+/* 
+    *************************************
+        BELOW 1008px Tablet
+    *************************************
+*/
+
+@media (max-width: 63em) {
+  /* 8px */
+  html {
+    font-size: 50%;
+  }
+}
+
+/* 
+    *************************************
+        BELOW 880px Tablet
+    *************************************
+*/
+
+@media (max-width: 55em) {
+  p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  input,
+  select {
+    width: 90%;
+    padding: 0.8rem;
+  }
+
+  #zbcc > .form-block form section.data-block > header .block-description {
+    font-size: 1.2rem;
+    padding: 1.6rem;
+  }
+}

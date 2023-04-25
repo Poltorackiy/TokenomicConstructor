@@ -1,0 +1,8 @@
+#zbcc > .form-block form section.data-block > .input-data .inputs-table:has(.unhidden) {
+    /* display: none; */
+}
+
+
+#zbcc > .form-block form section.data-block > .input-data .inputs-table.active {
+    display: inherit !important;
+}

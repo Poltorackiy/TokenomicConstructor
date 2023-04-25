@@ -1,0 +1,102 @@
+.hero_section {
+  background-image: url("../img/Hero_background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: Josefin Sans;
+}
+
+.hero_title_box_style {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.hero_title_box {
+  justify-self: center;
+  padding: 4.8rem;
+  margin-bottom: 6.4rem;
+}
+
+.hero_title {
+  font-weight: 500;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.hero_descr {
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #d9dade;
+  margin: 0 auto;
+  margin-bottom: 3.2rem;
+}
+
+.hero_button:link,
+.hero_button:visited {
+  text-decoration: none;
+  color: #ffba83;
+  padding: 1.2rem 3.2rem;
+  border: 1px solid #ffba83;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.hero_button:hover {
+  background-color: #ffba83;
+  color: #000;
+}
+
+.hero_about_block {
+  display: flex;
+  gap: 2.4rem;
+
+  max-width: 80%;
+  margin-bottom: 3.2rem;
+}
+
+.hero_about_box {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  padding: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  color: #d9dade;
+}
+
+.hero_about_question {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.hero_about_button:link,
+.hero_about_button:visited {
+  margin-top: auto;
+  text-decoration: none;
+  color: #d9dade;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid #d9dade;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.hero_about_button:hover {
+  background-color: #d9dade;
+  color: #000;
+}

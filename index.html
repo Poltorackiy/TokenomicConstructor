@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="source/css/base.css">
+    <link rel="stylesheet" href="source/css/zbcc.css">
+</head>
+
+<body>
+    <main>
+        <div id="zbcc">
+            <div class="form-block inline" data-id="data-blocks">
+                <form>
+                    <section class="data-block" data-id="initial-data">
+                        <header>
+                            <h3 class="block-title">INITIAL DATA</h3>
+                            <div class="block-description"></div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="base-inputs">
+                                <div class="inputs-table" data-id="initial-data">
+                                    <header>
+                                        <h3 class="table-title"></h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>Total Tokens Amount</th>
+                                            <th>Initial Token Price</th>
+                                            <th>Exchange Type</th>
+                                            <th>Trading Function</th>
+                                            <th>Duration</th>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" data-id="total-tokens-amount" placeholder="x" value="" min="1" step="1"></td>
+                                            <td><input type="number" data-id="initial-token-price" placeholder="x" value="" min="1" step="1"></td>
+                                            <td>
+                                                <select data-id="exchange-type">
+                                                    <option value="decentralized">Decentralized</option>
+                                                    <option value="centralized">Centralized</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select data-id="trading-function">
+                                                    <option value="increasing">Increasing</option>
+                                                    <option value="decreasing">Decreasing</option>
+                                                    <option value="volatility">Volatility</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="number" data-id="duration" placeholder="x" value="" min="1" step="1"></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+
+                    <section class="data-block" data-id="investment-rounds">
+                        <header>
+                            <h3 class="block-title">INVESTMENT ROUNDS</h3>
+                            <div class="block-description">
+                                <p>You can fill only two columns ("Token Price" (if it will change) and any of the other columns or "Fiat" and "Tokens Amount") - the rest will be calculated automatically.</p>
+                            </div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="extra-inputs">
+                                <label>
+                                    <p>Rounds Number</p>
+                                    <input type="number" data-id="rounds-number" placeholder="Enter rounds number" value="1" min="1" step="1">
+                                </label>
+                            </div>
+
+                            <div class="base-inputs">
+                                <div class="inputs-table numerable" data-id="rounds">
+                                    <header>
+                                        <h3 class="table-title"></h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>Round Title</th>
+                                            <th>Fiat</th>
+                                            <th>Token Price</th>
+                                            <th>Tokens amount</th>
+                                            <th>Investor share</th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+
+                    <section class="data-block" data-id="agents">
+                        <header>
+                            <h3 class="block-title">AGENTS</h3>
+                            <div class="block-description">
+                                <p>Agents are participants in the tokenomic (an individual or a group of individuals, a company or a group of companies (and any entity of individuals or companies), etc.).</p>
+                                <p>Add the Agents that you have in project. If they are included in the Initial tokens distribution, fill in one of the fields - "Agent Share" or "Tokens Amount".</p>
+                            </div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="extra-inputs">
+                                <label>
+                                    <p>Agents Number</p>
+                                    <input type="number" data-id="agents-number" placeholder="Enter agents number" value="1" min="1" step="1">
+                                </label>
+                            </div>
+
+                            <div class="base-inputs">
+                                <div class="inputs-table numerable" data-id="agents">
+                                    <header>
+                                        <h3 class="table-title"></h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>Agent Name</th>
+                                            <th>Agent Share</th>
+                                            <th>Tokens Amount</th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+
+                    <section class="data-block" data-id="pools">
+                        <header>
+                            <h3 class="block-title">POOLS</h3>
+                            <div class="block-description">
+                                <p>Pools are so-called safes to which tokens/funds are allocated for various services or project needs. Add the Pools that you have in project. If they are included in the Initial tokens distribution, fill in one of the fields - "Pool Share" or "Amount". (Pool types - project tokens (tokens), fiat (USD, UAN, etc.), cryptocurrency (USDC, USDT, etc.)</p>
+                            </div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="extra-inputs">
+                                <div class="inputs-table calcable" data-id="pool-types">
+                                    <table>
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Pool Type</th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="base-inputs">
+                                <div class="inputs-table calcable" data-id="pools">
+                                    <header>
+                                        <h3 class="table-title"></h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>Pool Title</th>
+                                            <th>Pool Type</th>
+                                            <th>Pool Share</th>
+                                            <th>Amount</th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+
+                    <section class="data-block" data-id="vesting-and-unlocking">
+                        <header>
+                            <h3 class="block-title">VESTING & UNLOCKING</h3>
+                            <div class="block-description"></div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="extra-inputs">
+                                <label>
+                                    <p>VESTING</p>
+                                    <button type="button" class="unhider" data-unhideableId="vesting">+</button>
+                                </label>
+                                <label>
+                                    <p>UNLOCKING</p>
+                                    <button type="button" class="unhider" data-unhideableId="unlocking">+</button>
+                                </label>
+                            </div>
+
+                            <div class="base-inputs">
+                                <div class="inputs-table calcable unhideable" data-id="vesting">
+                                    <header>
+                                        <h3 class="table-title">Vesting</h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>Agent Name</th>
+                                            <th>Pool</th>
+                                            <th>Start Vesting</th>
+                                            <th>End Vesting</th>
+                                            <th>Vesting Coefficient</th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+
+                                <div class="inputs-table calcable unhideable" data-id="unlocking">
+                                    <header>
+                                        <h3 class="table-title">Unlocking Schedule</h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>Agent Name</th>
+                                            <th>Start Unlocking</th>
+                                            <th>End Unlocking</th>
+                                            <th>Initial Unlocking</th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+
+                    <section class="data-block" data-id="project-services">
+                        <header>
+                            <h3 class="block-title">PROJECT SERVICES</h3>
+                            <div class="block-description"></div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="extra-inputs">
+                                <label>
+                                    <p>STAKING</p>
+                                    <button type="button" class="unhider" data-unhideableId="staking">+</button>
+                                </label>
+                                <label>
+                                    <p>FARMING</p>
+                                    <button type="button" class="unhider" data-unhideableId="farming">+</button>
+                                </label>
+                                <div>
+                                    <p>CHOOSE / ADD NEW SERVICE</p>
+                                    <select data-id="service-names">
+                                    </select>
+                                    <!-- <button type="button" class="service-chooser" data-id="delete">-</button> -->
+                                    <input type="text" data-id="service-name" placeholder="Enter Service name">
+                                    <button type="button" class="service-chooser" data-id="add">+</button>
+                                </div>
+                            </div>
+
+                            <div class="base-inputs">
+                                <div class="inputs-table calcable unhideable" data-id="staking">
+                                    <header>
+                                        <h3 class="table-title">Staking</h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Agent Name</th>
+                                            <th>Agent Share</th>
+                                            <th>Unstaking Factor</th>
+                                            <th>Reward Coefficient</th>
+                                            <th>Pool (For Rewards)</th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="add-curves">Add Curves</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="inputs-table calcable unhideable" data-id="farming">
+                                    <header>
+                                        <h3 class="table-title">Farming</h3>
+                                        <div class="table-description"></div>
+                                    </header>
+                                    <table>
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Agent Name</th>
+                                            <th>Agent Share</th>
+                                            <th>Unstaking Factor</th>
+                                            <th>Reward Coefficient</th>
+                                            <th>Pool (For Rewards)</th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="add-curves">Add Curves</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+
+                    <section class="data-block" data-id="token-circulation">
+                        <header>
+                            <h3 class="block-title">TOKEN CIRCULATION</h3>
+                            <div class="block-description">
+                                <p>You can add actions describing the circulation of the tokens between tokenomics entities (agents, pools, etc.).
+                                    <br>The Source can be an Agent, Pool, or Income of one of the added services.
+                                    <br>The Destination can be an Agent or Pool.
+                                    <br>Pre-Condition - is the condition under which the corresponding action takes place.
+                                    <br>These can be the time in which the specified action should take place, pool threshold values, or token price threshold values.</p>
+                            </div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="extra-inputs">
+                                <label>
+                                    <p>ADD ACTION</p>
+                                    <button type="button" class="unhider" data-unhideableId="actions">+</button>
+                                </label>
+                            </div>
+
+                            <div class="base-inputs">
+                                <div class="inputs-table calcable unhideable" data-id="actions">
+                                    <header>
+                                        <h3 class="table-title"></h3>
+                                        <div class="table-description"></div>
+                                    </header>
+
+                                    <table>
+                                        <tr>
+                                            <th>Action №</th>
+                                            <th>Source</th>
+                                            <th>Currency Type</th>
+                                            <th>Value % (per month)</th>
+                                            <th>Destination</th>
+                                            <th>Pre-Condition</th>
+                                            <th></th>
+                                        </tr>
+                                    </table>
+
+                                    <div class="action-buttons">
+                                        <button type="button" class="action" data-action="build-scheme">Build Scheme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <script>
+                        function generateJSON() {
+                            alert('JSON generated. Output in console')
+                            console.log(zbcc.dataBlocksForm.getValues())
+                            console.log(JSON.stringify(zbcc.dataBlocksForm.getValues()))
+
+                            let element = document.createElement('a')
+                            element.setAttribute('href', 'data:text/plainc;harset=utf-8,' + encodeURIComponent(JSON.stringify(zbcc.dataBlocksForm.getValues())))
+                            element.setAttribute('download', 'data.json')
+
+                            element.style.display = 'none'
+                            document.body.appendChild(element)
+
+                            element.click()
+
+                            document.body.removeChild(element)
+                        }
+                    </script>
+                    <button
+                        onclick="generateJSON()"
+                        style="width: 50%; height: 100px; margin-bottom: 200px; display: block; margin: 0px auto 200px"
+                        >Generate JSON</button>
+                </form>
+            </div>
+
+            <div class="form-block popup" data-id="pre-condition">
+                <form>
+                    <section class="data-block" data-id="pre-condition">
+                        <header>
+                            <h3 class="block-title">Add pre-condition</h3>
+                            <div class="block-description"></div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="base-inputs">
+                                <div data-id="time">
+                                    <h3>
+                                        <label><input type="checkbox" data-id="time-select">Time</label>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <label><input disabled type="radio" name="monthly" data-id="time-monthly">monthly</label>
+                                        </li>
+                                        <li>
+                                            <input disabled type="radio" name="monthly" data-id="time-monthly-easier">
+                                            when month is
+                                            <select disabled data-id="time-monthly-easier-cb1">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="time-monthly-easier-inpx">
+                                        </li>
+                                        <li>
+                                            <input disabled type="radio" name="monthly" data-id="time-monthly-harder">
+                                            when month is
+                                            <select disabled data-id="time-monthly-harder-cb1">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="time-monthly-harder-inpx">
+                                            and
+                                            <select disabled data-id="time-monthly-harder-cb2">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="time-monthly-harder-inpy">
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div data-id="token-price">
+                                    <select disabled data-id="token-price-andor">
+                                        <option value="0" disabled selected>AND / OR</option>
+                                        <option value="AND">AND</option>
+                                        <option value="OR">OR</option>
+                                    </select>
+                                    <h3>
+                                        <label><input type="checkbox" data-id="token-price-select">Token price threshold values</label>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <input disabled type="radio" name="token-price" data-id="token-price-easier">
+                                            when Token price is
+                                            <select disabled data-id="token-price-easier-cb1">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="token-price-easier-inpx">
+                                        </li>
+                                        <li>
+                                            <input disabled type="radio" name="token-price" data-id="token-price-harder">
+                                            when Token price is
+                                            <select disabled data-id="token-price-harder-cb1">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="token-price-harder-inpx">
+                                            and
+                                            <select disabled data-id="token-price-harder-cb2">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="token-price-harder-inpy">
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div data-id="pool-threshold">
+                                    <select disabled data-id="pool-threshold-andor">
+                                        <option value="0" disabled selected>AND / OR</option>
+                                        <option value="AND">AND</option>
+                                        <option value="OR">OR</option>
+                                    </select>
+                                    <h3>
+                                        <label><input type="checkbox" data-id="pool-threshold-select">Pool threshold values</label>
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <input disabled type="radio" name="pool-threshold" data-id="pool-threshold-easier">
+                                            when
+                                            <select disabled data-id="pool-threshold-easier-pool">
+                                                <option value="0" disabled selected>Pool #</option>
+                                                <option data-id="0" value="Pool 1">Pool 1</option>
+                                            </select>
+                                            is
+                                            <select disabled data-id="pool-threshold-easier-cb1">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="pool-threshold-easier-inpx">
+                                        </li>
+                                        <li>
+                                            <input disabled type="radio" name="pool-threshold" data-id="pool-threshold-harder">
+                                            when
+                                            <select disabled data-id="pool-threshold-harder-pool">
+                                                <option value="0" disabled selected>Pool #</option>
+                                                <option data-id="0" value="Pool 1">Pool 1</option>
+                                            </select>
+                                            is
+                                            <select disabled data-id="pool-threshold-harder-cb1">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="pool-threshold-harder-inpx">
+                                            and
+                                            <select disabled data-id="pool-threshold-harder-cb2">
+                                                <option value="0" disabled selected>&lt;/&lt;=/&gt;=/&gt;/==/!=</option>
+                                                <option value="<"><</option>
+                                                <option value="<="><=</option>
+                                                <option value=">=">>=</option>
+                                                <option value=">">></option>
+                                                <option value="==">==</option>
+                                                <option value="!=">!=</option>
+                                            </select>
+                                            <input disabled type="number" min="1" step="1" data-id="pool-threshold-harder-inpy">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="action-buttons">
+                                    <button type="submit" class="action" data-id="apply-pre-condition">Ok</button>
+                                    <button type="submit" class="action" data-id="dismiss-pre-condition">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+
+            <div class="form-block popup" data-id="builded-scheme">
+                <form>
+                    <section class="data-block" data-id="pre-condition">
+                        <header>
+                            <h3 class="block-title">Builded scheme</h3>
+                            <div class="block-description"></div>
+                        </header>
+
+                        <div class="input-data">
+                            <div class="base-inputs">
+                                <div data-id="charts"></div>
+                                <div class="action-buttons">
+                                    <button type="submit" class="action" data-id="apply-pre-condition">Ok</button>
+                                    <button type="submit" class="action" data-id="dismiss-pre-condition">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="source/lib/js/jquery.min.js"></script>
+    <script src="source/lib/js/chart.min.js"></script>
+    <script src="source/js/htmlTemplates.js"></script>
+    <script src="source/js/zbcc/functions.js"></script>
+    <script src="source/js/zbcc/htmlElements.js"></script>
+    <script src="source/js/zbcc/htmlTables.js"></script>
+    <script src="source/js/zbcc/constructor.js"></script>
+    <script src="source/js/zbcc/dataBlocks.js"></script>
+    <script src="source/js/main.js"></script>
+</body>
+
+</html>
